@@ -13,6 +13,10 @@
         cmd: "ansible-galaxy collection list"
       register: "collections"
 
+    - name: "SLEEP"
+      ansible.builtin.pause:
+        seconds: 300
+
     - name: "DISPLAY COLLECTIONS"
       ansible.builtin.debug:
         var: "collections"
