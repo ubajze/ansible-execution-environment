@@ -14,9 +14,13 @@
 
     - name: "LIST COLLECTIONS"
       ansible.builtin.command:
-        cmd: "ansible-galaxy collection list --format json | jq"
+        cmd: "ansible-galaxy collection list --format json"
       register: "collections"
+
+    - name: "PARSE OUTPUT"
+      ansible.builtin.set_fact:
+        collections_data: "{{ collections.stdout | from_json }}"
 
     - name: "DISPLAY COLLECTIONS"
       ansible.builtin.debug:
-        var: "collections"
+        var: "collections_data"
