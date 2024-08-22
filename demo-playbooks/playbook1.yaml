@@ -14,7 +14,7 @@
 
     - name: "LIST COLLECTIONS"
       ansible.builtin.command:
-        cmd: "ansible-galaxy collection list"
+        cmd: "ansible-galaxy collection list --format json"
       register: "collections"
 
     - name: "DISPLAY COLLECTIONS"

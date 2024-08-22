@@ -10,6 +10,8 @@ dependencies:
   ansible_runner:
     package_pip: ansible-runner
   galaxy: requirements.yml
+  system:
+    - "jq"
 
 images:
   base_image:
