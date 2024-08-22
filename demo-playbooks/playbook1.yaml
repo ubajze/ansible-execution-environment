@@ -1,0 +1,9 @@
+---
+- name: "DISPLAY COLLECTIONS"
+  hosts: "localhost"
+  gather_facts: false
+
+  tasks:
+    - name: "DEBUG"
+      ansible.builtin.debug:
+        msg: "This is the first message"
