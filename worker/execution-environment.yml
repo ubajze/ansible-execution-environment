@@ -9,7 +9,7 @@ dependencies:
     package_pip: ansible-core
   ansible_runner:
     package_pip: ansible-runner
-  # galaxy: requirements.yml
+  galaxy: requirements.yml
 
 images:
   base_image:
@@ -18,3 +18,7 @@ images:
 additional_build_steps:
   prepend_base:
     - "RUN yum update"
+
+options:
+  tags:
+    - "ghcr.io/ubajze/ansible-execution-env:latest"

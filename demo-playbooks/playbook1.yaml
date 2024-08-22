@@ -8,9 +8,9 @@
       ansible.builtin.debug:
         msg: "This is the first message"
 
-    - name: "SLEEP"
-      ansible.builtin.pause:
-        seconds: 300
+    # - name: "SLEEP"
+    #   ansible.builtin.pause:
+    #     seconds: 300
 
     - name: "LIST COLLECTIONS"
       ansible.builtin.command:
