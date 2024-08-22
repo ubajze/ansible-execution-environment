@@ -7,3 +7,12 @@
     - name: "DEBUG"
       ansible.builtin.debug:
         msg: "This is the first message"
+
+    - name: "LIST COLLECTIONS"
+      ansible.builtin.command:
+        cmd: "ansible-galaxy collection list"
+      register: "collections"
+
+    - name: "DISPLAY COLLECTIONS"
+      ansible.builtin.debug:
+        var: "collections"
